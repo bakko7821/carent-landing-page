@@ -2,15 +2,57 @@
 
 /* Variables */
 :root {
-  --background-color: "#FBFBFB";
-  --white-color: "#FFFFFF";
-  --white-second-color: "#FEFEFE";
-  --text-color: "#575757";
-  --title-color: "#141414";
-  --primary-color: "#FE8400";
-  --tint-color: "#FFE4C6";
-  --montserrat: font-family: "Montserrat", sans-serif;
-  --poppins: font-family: "Poppins", sans-serif;
+  --background-color: #fbfbfb;
+  --white-color: #ffffff;
+  --white-second-color: #fefefe;
+  --text-color: #575757;
+  --title-color: #141414;
+  --primary-color: #fe8400;
+  --tint-color: #ffe4c6;
+  --montserrat: "Montserrat", sans-serif;
+  --poppins: "Poppins", sans-serif;
+}
+
+/* Custom HTML Variables */
+
+.h1,
+.h2,
+.h3,
+.h4 {
+  font-family: var(--montserrat);
+  line-height: 1.23;
+}
+
+.h1 {
+  font-size: clamp(1.75rem, 1.2rem + 2.2vw, 3rem);
+}
+
+.h2 {
+  font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.25rem);
+}
+
+.h3 {
+  font-size: clamp(1.25rem, 1rem + 1vw, 1.625rem);
+}
+
+.h4 {
+  font-size: clamp(1rem, 0.9rem + 0.6vw, 1.375rem);
+}
+
+.body-sm {
+  font-family: var(--poppins);
+  font-size: clamp(0.875rem, 0.82rem + 0.2vw, 1rem);
+  line-height: 1.5;
+}
+
+.horizontal-plug {
+  width: 2px;
+  align-self: stretch;
+}
+
+.vertical-plug {
+  height: 2px;
+  width: 100%;
 }
 
 /* Reset and base styles  */
@@ -123,4 +165,103 @@ legend {
 
 input[type="file"] {
   max-width: 100%;
+}
+
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+}
+
+main {
+  max-width: 1440px;
+  width: 100%;
+}
+
+main section#hero {
+  position: relative;
+  isolation: isolate;
+  padding-block: 2.22%;
+  width: 100%;
+  border: 2px red solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main section#hero .bg-black {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 742px;
+  width: 41%;
+  background-color: var(--title-color);
+}
+
+main section#hero header {
+  z-index: 2;
+  padding-inline: clamp(16px, 11.25vw, 162px);
+  border: 2px green solid;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main section#hero header h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--primary-color);
+}
+
+main section#hero header .left-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(3rem, 7vw, 6.125rem);
+}
+
+main section#hero header .left-box nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1rem, 2.5vw, 2rem);
+  mix-blend-mode: difference;
+}
+
+main section#hero header .left-box nav ul a {
+  color: var(--title-color);
+}
+
+main section#hero header .left-box .auth-box {
+  background-color: var(--primary-color);
+  border-radius: 4px;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  overflow: hidden;
+}
+
+main section#hero header .left-box .auth-box .horizontal-plug {
+  background-color: var(--title-color);
+}
+
+main section#hero header .left-box .auth-box button {
+  padding: 0.5rem 1rem;
+  transition: background-color 0.5s;
+  background-color: transparent;
+  color: var(--title-color);
+}
+
+main section#hero header .left-box .auth-box button:hover {
+  background-color: var(--title-color);
+  color: var(--primary-color);
 }
