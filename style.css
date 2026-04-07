@@ -28,7 +28,7 @@
 }
 
 .h2 {
-  font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.25rem);
+  font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2rem);
 }
 
 .h3 {
@@ -45,14 +45,20 @@
   line-height: 1.5;
 }
 
-.horizontal-plug {
+.vertical-plug {
   width: 2px;
   align-self: stretch;
 }
 
-.vertical-plug {
+.horizontal-plug {
   height: 2px;
   width: 100%;
+}
+
+.section-title {
+  padding-bottom: 0.5rem;
+  font-weight: 500;
+  border-bottom: 2px var(--primary-color) solid;
 }
 
 /* Reset and base styles  */
@@ -176,6 +182,22 @@ body {
   width: 100%;
   min-height: 100vh;
   margin: 0;
+  background-color: var(--white-color);
+}
+
+/* SCROLL */
+
+body::-webkit-scrollbar {
+  width: 0.25rem; /* ширина всей полосы прокрутки */
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--background-color); /* цвет зоны отслеживания */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color); /* цвет бегунка */
+  border-radius: 20px; /* округлось бегунка */
 }
 
 main {
@@ -215,7 +237,7 @@ main section#hero header {
   justify-content: space-between;
 }
 
-main section#hero header h3 {
+main section#hero header h1 {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 900;
   text-transform: uppercase;
@@ -250,7 +272,7 @@ main section#hero header .left-box .auth-box {
   overflow: hidden;
 }
 
-main section#hero header .left-box .auth-box .horizontal-plug {
+main section#hero header .left-box .auth-box .vartical-plug {
   background-color: var(--title-color);
 }
 
@@ -265,3 +287,24 @@ main section#hero header .left-box .auth-box button:hover {
   background-color: var(--title-color);
   color: var(--primary-color);
 }
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  gap: 2.5rem;
+  z-index: 2;
+  width: 100%;
+  border: 2px red solid;
+  position: relative;
+}
+
+/* footer .bg-black {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 524px;
+  background-color: var(--title-color);
+} */
