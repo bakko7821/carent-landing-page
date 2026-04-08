@@ -244,7 +244,6 @@ main section#hero {
   align-items: center;
   justify-content: start;
   min-height: 100vh;
-  overflow: hidden;
 }
 
 main section#hero .bg-black {
@@ -326,7 +325,6 @@ main section#hero header .left-box .auth-box button:hover {
 /* our sections */
 
 main section#about {
-  border: 2px red solid;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -363,7 +361,152 @@ main section#about .content .textbox a:hover {
   color: var(--title-color);
 }
 
+main section#booking {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  width: 100%;
+}
+
+main section#booking .content {
+  width: 100%;
+  min-height: 300px;
+  background-color: var(--tint-color);
+}
+
+main section#cars {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  width: 100%;
+}
+
+main section#cars .content ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+main section#cars .content ul li.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px #c4c4c4 solid;
+  border-radius: 4px;
+  padding: 2.5rem 1.5rem;
+  gap: 0.75rem;
+}
+
+main section#cars .content ul li.card img.main {
+  max-width: 320px;
+}
+
+main section#cars .content ul li.card .textbox {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+main section#cars .content ul li.card .textbox .title-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+main section#cars .content ul li.card .textbox .title-info p {
+  font-weight: 500;
+}
+
+main section#cars .content ul li.card .textbox .title-info ul {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+}
+
+main section#cars .content ul li.card .textbox .title-info ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+main section#cars .content ul li.card .textbox .bottom-info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main section#cars .content ul li.card .textbox .bottom-info .daily-info {
+  display: flex;
+  flex-direction: column;
+}
+
+main
+  section#cars
+  .content
+  ul
+  li.card
+  .textbox
+  .bottom-info
+  .daily-info
+  p:nth-child(1) {
+  color: var(--text-color);
+}
+
+main
+  section#cars
+  .content
+  ul
+  li.card
+  .textbox
+  .bottom-info
+  .daily-info
+  p:nth-child(2) {
+  font-weight: 500;
+}
+
+main section#cars .content ul li.card .textbox .bottom-info button {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background-color: var(--primary-color);
+  color: var(--title-color);
+  transition: all 0.35s;
+}
+
+main section#cars .content ul li.card .textbox .bottom-info button:hover {
+  background-color: var(--title-color);
+  color: var(--primary-color);
+}
+
+main section#cars .slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+main section#cars .slider span {
+  width: 16px;
+  height: 16px;
+  background-color: #eaeaea;
+  border-radius: 999%;
+}
+
+main section#cars .slider span.active {
+  background-color: var(--primary-color);
+}
+
 /* footer */
+footer {
+  width: 100%;
+}
+
 footer section#contacts {
   display: flex;
   flex-direction: column;
@@ -502,4 +645,12 @@ footer .bottom-box ul.social-box {
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
+}
+
+footer .bottom-box ul.social-box li {
+  transition: transform 0.5s;
+}
+
+footer .bottom-box ul.social-box li:hover {
+  transform: scale(1.1);
 }
