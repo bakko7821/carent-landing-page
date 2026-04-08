@@ -71,6 +71,8 @@
 }
 
 .section-title {
+  position: relative;
+  z-index: 10;
   padding-bottom: 0.5rem;
   font-weight: 500;
   border-bottom: 2px var(--primary-color) solid;
@@ -110,6 +112,11 @@ header,
 section,
 main {
   display: block;
+}
+
+section {
+  position: relative;
+  z-index: 999;
 }
 
 h1,
@@ -218,6 +225,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
   max-width: 1440px;
   width: 100%;
 }
@@ -227,11 +239,12 @@ main section#hero {
   isolation: isolate;
   padding-block: 2.22%;
   width: 100%;
-  border: 2px red solid;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
 main section#hero .bg-black {
@@ -247,7 +260,6 @@ main section#hero .bg-black {
 main section#hero header {
   z-index: 2;
   padding-inline: clamp(16px, 11.25vw, 162px);
-  border: 2px green solid;
   width: 100%;
   display: flex;
   align-items: center;
@@ -311,6 +323,47 @@ main section#hero header .left-box .auth-box button:hover {
   color: var(--primary-color);
 }
 
+/* our sections */
+
+main section#about {
+  border: 2px red solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+main section#about .content {
+  gap: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main section#about .content .textbox {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  max-width: 38%;
+  gap: 1.5rem;
+}
+
+main section#about .content .textbox p {
+  color: var(--text-color);
+}
+
+main section#about .content .textbox a {
+  font-weight: 600;
+  color: var(--primary-color);
+  transition: all 0.35s;
+}
+
+main section#about .content .textbox a:hover {
+  color: var(--title-color);
+}
+
+/* footer */
 footer section#contacts {
   display: flex;
   flex-direction: column;
@@ -319,7 +372,6 @@ footer section#contacts {
   gap: 2.5rem;
   z-index: 2;
   width: 100%;
-  border: 2px red solid;
   position: relative;
 }
 
