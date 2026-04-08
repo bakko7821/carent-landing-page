@@ -39,9 +39,18 @@
   font-size: clamp(1rem, 0.9rem + 0.6vw, 1.375rem);
 }
 
-.body-sm {
+.body-sm,
+.body-lg {
   font-family: var(--poppins);
+}
+
+.body-sm {
   font-size: clamp(0.875rem, 0.82rem + 0.2vw, 1rem);
+  line-height: 1.5;
+}
+
+.body-lg {
+  font-size: clamp(1rem, 0.9rem + 0.6vw, 1.5rem);
   line-height: 1.5;
 }
 
@@ -133,6 +142,8 @@ input,
 textarea,
 button,
 select {
+  border: none;
+  outline: none;
   font-family: inherit;
   font-size: inherit;
   color: inherit;
@@ -182,7 +193,7 @@ body {
   width: 100%;
   min-height: 100vh;
   margin: 0;
-  background-color: var(--white-color);
+  background-color: var(--white-second-color);
 }
 
 /* SCROLL */
@@ -288,7 +299,7 @@ main section#hero header .left-box .auth-box button:hover {
   color: var(--primary-color);
 }
 
-footer {
+footer section#contacts {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -308,3 +319,88 @@ footer {
   height: 524px;
   background-color: var(--title-color);
 } */
+
+footer .content {
+  background-color: var(--white-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(2.5rem, 5vw, 5.5rem);
+  padding: 56px 40px;
+  -webkit-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.05);
+}
+
+footer .content form {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+footer .content form .inputs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+footer .content form button {
+  border-radius: 4px;
+  color: var(--title-color);
+  padding: 0.75rem 1.75rem;
+  background-color: var(--primary-color);
+}
+
+.floating-input {
+  padding: 18px 16px;
+  border: 1px #c4c4c4 solid;
+  background-color: var(--white-second-color);
+  border-radius: 4px;
+  position: relative;
+  width: 100%;
+  min-width: 400px;
+  color: var(--text-color);
+}
+
+/* Прячем placeholder, чтобы не мешался */
+.floating-input input::placeholder,
+.floating-input textarea::placeholder {
+  color: transparent;
+}
+
+/* Лейбл */
+.floating-input label {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  pointer-events: none;
+  padding: 0 4px;
+  border-radius: 4px;
+  transition: 0.2s ease all;
+  color: var(--text-color);
+}
+
+/* Когда поле пустое — label внутри */
+.floating-input input:placeholder-shown + label,
+.floating-input textarea:placeholder-shown + label {
+  top: 16px;
+}
+
+/* Когда фокус или есть текст — label наверху */
+.floating-input input:focus + label,
+.floating-input input:not(:placeholder-shown) + label,
+.floating-input textarea:focus + label,
+.floating-input textarea:not(:placeholder-shown) + label {
+  display: flex;
+  align-items: center;
+  top: -16px;
+  left: 8px;
+  padding: 4px;
+  background-color: var(--white-color);
+  font-size: var(--rem1);
+  color: var(--secondary-text-color); /* синий при фокусе */
+}
