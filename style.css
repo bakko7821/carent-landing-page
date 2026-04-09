@@ -235,15 +235,15 @@ main {
 }
 
 main section#hero {
+  gap: 2rem;
   position: relative;
-  isolation: isolate;
   padding-block: 2.22%;
+  min-height: 742px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: start;
-  min-height: 100vh;
 }
 
 main section#hero .bg-black {
@@ -320,6 +320,65 @@ main section#hero header .left-box .auth-box button {
 main section#hero header .left-box .auth-box button:hover {
   background-color: var(--title-color);
   color: var(--primary-color);
+}
+
+main section#hero .content {
+  min-height: 545px;
+  position: relative;
+  padding-inline: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+  z-index: 2;
+}
+
+main section#hero .content .textbox {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 3rem;
+  padding: 2rem 0;
+  background-color: rgba(0, 0, 0, 0.15);
+  max-width: 528px;
+  z-index: 3;
+}
+
+main section#hero .content .textbox .topbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+main section#hero .content .textbox .topbox h2 {
+  color: var(--white-color);
+  font-weight: 800;
+}
+
+main section#hero .content .textbox .topbox p {
+  color: var(--white-color);
+}
+
+main section#hero .content .textbox button {
+  padding: 0.75rem 3.5rem;
+  color: var(--title-color);
+  background-color: var(--primary-color);
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.35s;
+}
+
+main section#hero .content .textbox button:hover {
+  color: var(--primary-color);
+  background-color: var(--title-color);
+}
+
+main section#hero .content img {
+  position: absolute;
+  right: 0;
 }
 
 /* our sections */
@@ -611,6 +670,38 @@ main section#clients ul li .description {
   text-align: center;
   color: var(--text-color);
   max-width: 400px;
+}
+
+main section#info {
+  padding: 4rem 10rem;
+  width: 100%;
+  background-color: var(--tint-color);
+}
+
+main section#info ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10rem;
+}
+
+main section#info ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+main section#info ul li .title {
+  font-family: var(--poppins);
+  color: var(--title-color);
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+
+main section#info ul li .description {
+  color: var(--text-color);
 }
 
 /* footer */
