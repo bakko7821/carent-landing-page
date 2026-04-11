@@ -199,6 +199,7 @@ input[type="file"] {
 
 html,
 body {
+  border: 2px green solid;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -444,14 +445,14 @@ main section#cars {
   width: 100%;
 }
 
-main section#cars .content ul {
+main section#cars ul {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 2.5rem;
 }
 
-main section#cars .content ul li.card {
+main section#cars ul li.card {
   display: flex;
   flex-direction: column;
   border: 1px #c4c4c4 solid;
@@ -460,77 +461,61 @@ main section#cars .content ul li.card {
   gap: 0.75rem;
 }
 
-main section#cars .content ul li.card img.main {
+main section#cars ul li.card img.main {
   max-width: 320px;
 }
 
-main section#cars .content ul li.card .textbox {
+main section#cars ul li.card .textbox {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
 }
 
-main section#cars .content ul li.card .textbox .title-info {
+main section#cars ul li.card .textbox .title-info {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
 
-main section#cars .content ul li.card .textbox .title-info p {
+main section#cars ul li.card .textbox .title-info p {
   font-weight: 500;
 }
 
-main section#cars .content ul li.card .textbox .title-info ul {
+main section#cars ul li.card .textbox .title-info ul {
   display: flex;
   align-items: center;
   justify-content: start;
   gap: 1rem;
 }
 
-main section#cars .content ul li.card .textbox .title-info ul li {
+main section#cars ul li.card .textbox .title-info ul li {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.25rem;
 }
 
-main section#cars .content ul li.card .textbox .bottom-info {
+main section#cars ul li.card .textbox .bottom-info {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-main section#cars .content ul li.card .textbox .bottom-info .daily-info {
+main section#cars ul li.card .textbox .bottom-info .daily-info {
   display: flex;
   flex-direction: column;
 }
 
-main
-  section#cars
-  .content
-  ul
-  li.card
-  .textbox
-  .bottom-info
-  .daily-info
-  p:nth-child(1) {
+main section#cars ul li.card .textbox .bottom-info .daily-info p:nth-child(1) {
   color: var(--text-color);
 }
 
-main
-  section#cars
-  .content
-  ul
-  li.card
-  .textbox
-  .bottom-info
-  .daily-info
-  p:nth-child(2) {
+main section#cars ul li.card .textbox .bottom-info .daily-info p:nth-child(2) {
   font-weight: 500;
 }
 
-main section#cars .content ul li.card .textbox .bottom-info button {
+main section#cars ul li.card .textbox .bottom-info button {
   padding: 0.5rem 1rem;
   border-radius: 4px;
   background-color: var(--primary-color);
@@ -538,7 +523,7 @@ main section#cars .content ul li.card .textbox .bottom-info button {
   transition: all 0.35s;
 }
 
-main section#cars .content ul li.card .textbox .bottom-info button:hover {
+main section#cars ul li.card .textbox .bottom-info button:hover {
   background-color: var(--title-color);
   color: var(--primary-color);
 }
@@ -855,4 +840,121 @@ footer .bottom-box ul.social-box li {
 
 footer .bottom-box ul.social-box li:hover {
   transform: scale(1.1);
+}
+
+@media (max-width: 1280px) {
+  main {
+    max-width: 1280px;
+  }
+
+  main section#hero .bg-black {
+    width: 35%;
+  }
+
+  main section#cars ul li.card img.main {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 1024px) {
+  main section#hero header {
+    padding-inline: 1.5rem;
+  }
+
+  main section#hero .content {
+    padding-inline: 1.5rem;
+  }
+
+  main section#hero header .left-box {
+    gap: 2rem;
+  }
+
+  main section#cars ul {
+    gap: 1rem;
+  }
+
+  main section#cars ul li.card {
+    padding: 1.5rem 1rem;
+  }
+
+  main section#cars ul li.card img.main {
+    max-width: 280px;
+  }
+
+  footer .bottom-box {
+    padding-inline: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  main section#hero header {
+    padding-inline: 1rem;
+  }
+
+  main section#hero .content {
+    padding-inline: 1rem;
+  }
+
+  main section#hero header .left-box {
+    gap: 1rem;
+  }
+
+  main section#hero .bg-black {
+    width: 30%;
+  }
+
+  main section#hero .content img {
+    max-width: 80%;
+  }
+
+  main section#hero {
+    min-height: 300px;
+  }
+
+  main section#about img {
+    max-width: 40%;
+  }
+
+  main section#about .content .textbox {
+    max-width: 50%;
+  }
+
+  main section#cars ul {
+    padding-inline: 1rem;
+    width: 100%;
+    gap: 1rem;
+    flex-direction: column;
+  }
+
+  main section#cars ul li.card {
+    width: 100%;
+  }
+
+  main section#cars ul li.card ul {
+    flex-direction: row;
+  }
+
+  main section#services ul {
+    gap: 1rem;
+  }
+
+  main section#services ul li.card {
+    width: 30%;
+  }
+
+  main section#clients ul {
+    padding-inline: 1rem;
+  }
+
+  main section#clients ul li {
+    padding: 3rem 1rem;
+  }
+
+  footer .content img {
+    display: none;
+  }
+
+  footer .bottom-box {
+    padding-inline: 1rem;
+  }
 }
